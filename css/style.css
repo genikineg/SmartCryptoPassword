@@ -1,0 +1,577 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-height: 180px;
+  padding: 0;
+  width: 380px;
+  background-color:rgba(0,0,0,0.5);
+  z-index: -2;
+  width: 0vw;
+  height: 100vh;
+}
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.background-blur {
+  z-index: -1;
+  background-color:rgba(0,0,0,0.1);
+  opacity: 0.5;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+h1 {
+  font-family: 'Menlo', monospace;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #FFF;
+}
+p {
+  text-align: center;
+  font-family: 'CRC55' !important;
+  color: #333333 !important;
+  font-size: 16px;
+}
+a:link,
+a:visited {
+  color: #000000;
+  outline: 0;
+  text-decoration: none;
+}
+
+.modal-header {
+  align-items: center;
+  border-bottom: 0.5px solid #000;
+  height: 50px;
+}
+.modal-content {
+  padding: 0 22px;
+}
+.modal-icons {
+  border-top: 0.5px solid #000;
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+}
+.modal-icons-icon {
+  display: inherit;
+  height: 70px;
+  width: 70px;
+  padding: 27px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+.modal-icons-icon {
+  display: inherit;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+.modal-icons-icon:hover {
+  opacity: 0.75;
+}
+.icons {
+  height:100%;
+  width: 100%;
+}
+.modal-donations {
+  border-top: 0.5px solid #000;
+  height: 50px;
+  width: 100%;
+}
+.logo {
+  padding: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.logo-icon {
+  vertical-align: text-bottom;
+  margin-right: 12px;
+  width: 28px;
+  height: 28px;
+}
+.version {
+  color: #444;
+  font-size: 18px;
+}
+.button {
+  padding: 0px;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid #cdcbcc;
+  border: 1px solid #cdcbcc00;
+  cursor: pointer;
+  transition: .3s;
+  color: #ffffff;
+  font-size: calc(7vw + 0vh);
+  font-size: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.settingsButton {
+  background-color: #ffdf00;
+  /*background-color: #007ce7;*/
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.getPasswordButton {
+  background-color: #00b7d4;
+  background-color: #ff0076;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.backSettingsPassword {
+  background-color: #00d5be;
+  background-color: #9900d8;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.backAddApp {
+  background-color: #00d5be;
+  background-color: #9900d8;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.savePasswordButton {
+  background-color: #21d500;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.saveAddAppButton {
+  background-color: #21d500;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.successfullyGetPassword {
+  display: none;
+  height: 100px;
+  width:  100px;
+  position: relative;
+  left: calc(50% - 50px);
+}
+.successfullyGetPassword img{
+  max-height: 100%;
+  max-width: 100%;
+
+}
+.failGetPassword {
+  display: none;
+  height: 100px;
+  width:  100px;
+  position: relative;
+  left: calc(50% - 50px);
+}
+.failGetPassword img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+
+.modal-content-description{
+  display: block;
+}
+
+.modal-content-settings{
+  display: none;
+}
+
+
+input {
+    border-bottom: 3px solid #0bbbff;
+    transition: .55s;
+}
+
+input {
+    font-size: 1em;
+    padding: 9px;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-left: 14px;
+    padding-right: 14px;
+    display: block;
+    width: 306px;
+    margin-bottom: 10px;
+    border: 1px solid #cdcbcc;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(205, 203, 204);
+    text-align: center;
+    opacity: 0.9;
+
+}
+
+.numbers {
+    width: 200px;
+    display: block;
+    user-select: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0px;
+    position: relative;
+}
+
+.numbers .number {
+    display: inline-block;
+    background-color: #0bbbff;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 2px;
+    line-height: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    animation-name: numbersnumbersize;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25), 0 0 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+
+}
+
+.numbers .number:hover {
+    opacity: 1;
+}
+
+@keyframes numbersnumbersize {
+    0%   {font-size: 28px;}
+    25%  {font-size: 20px;}
+    50%  {font-size: 12px;}
+    100% {font-size: 0px;}
+}
+
+.numbers .reload-pincode {
+    display: inline-block;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    line-height: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    float: left;
+    left: 20px;
+    bottom: -5px;
+    opacity: 0.5;
+}
+
+.numbers .reload-pincode:hover {
+    opacity: 0.75;
+}
+
+.numbers .reload-pincode img{
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.numbers .back-pincode {
+  display: inline-block;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  line-height: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: -5px;
+  opacity: 0.5;
+}
+
+.numbers .back-pincode:hover {
+    opacity: 0.75;
+}
+
+.numbers .back-pincode img{
+  max-height: 70%;
+  max-width: 70%;
+}
+
+textarea:disabled, input:not([type]):disabled, input[type="color" i]:disabled, input[type="date" i]:disabled, input[type="datetime" i]:disabled, input[type="datetime-local" i]:disabled, input[type="email" i]:disabled, input[type="month" i]:disabled, input[type="password" i]:disabled, input[type="number" i]:disabled, input[type="search" i]:disabled, input[type="tel" i]:disabled, input[type="text" i]:disabled, input[type="time" i]:disabled, input[type="url" i]:disabled, input[type="week" i]:disabled {
+    background-color: rgb(244, 244, 244);
+}
+
+
+.modal-content-segetPasswordttings {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0bbbff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.0);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.modal-content-apps {
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /*color: #b5b5b5;*/
+}
+
+.modal-content-apps-placeholder:hover {
+  color: #575757;
+  background-color: #fff;
+}
+
+.modal-content-apps-placeholder {
+  border: 2px solid #d6d6d6;
+  -webkit-transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  margin-top: 10px;
+  text-align: center;
+  color: #757575;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.modal-content-apps-array {
+  display: none;
+  max-height: 270px;
+  position: absolute;
+  width: 334px;
+  z-index: 15;
+  background-color: #fff;
+  overflow-y: auto;
+  border-right: 2px solid #d6d6d6;
+  opacity: 0.9;
+}
+
+.modal-content-apps-array::after {
+  speak: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 306px;
+}
+
+.modal-content-apps-array-object {
+  border: 2px solid #000;
+  border-top: 0px solid #000;
+  border-right: 0px solid #000;
+  -webkit-transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.modal-content-apps-array-object-delete {
+  display: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background-image: url(/img/fail.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-content-apps-array-object-delete:hover {
+  opacity: 0.85;
+}
+
+.modal-content-apps-array-object:hover {
+  background-color: #eee;
+}
+
+.modal-content-apps-placeholder::after {
+  content: '\25BE';
+  right: 5px;
+}
+
+.modal-content-apps-placeholder::after {
+  speak: none;
+  position: absolute;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+  content: url(/img/botton-arrow.png);
+  opacity: 0.25;
+}
+
+.modal-content-apps-placeholder-open::after {
+  content: url(/img/top-arrow.png);
+}
+
+.modal-content-apps-placeholder:hover:after, .modal-content-apps-placeholder:hover:before {
+  opacity: 0.5;
+}
+
+.modal-content-apps-array-object-add {
+  text-align: center;
+  background-color: #00e200;
+  color: #fff;
+}
+
+.modal-content-apps-array-object-add:hover {
+  background-color: #00c501;
+  opacity: 0.95;
+}
+
+.modal-content-apps-popup-add-app {
+  display: none;
+}
+
+.hide{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 26px;
+  height: 18px;
+  position: absolute;
+  padding: 2px;
+  top: 2px;
+  right: 2px;
+  background-color: #d1d1d1;
+  border-radius: 2px;
+  font-size: 12px;
+  display: none;
+}
+
+.hide:hover {
+  opacity: 0.75;
+}
+
+.modal-donations{
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  color: #fff;
+}
+
+.modal-donations p{
+  color: #fff;
+}
+
+.modal-donations:hover {
+  opacity: 0.75;
+}

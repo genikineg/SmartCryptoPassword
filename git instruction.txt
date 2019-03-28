@@ -1,0 +1,11 @@
+git init
+
+git remote add github https://github.com/genikineg/SmartCryptoPassword.git
+git push -u github master
+
+git remote add bitbucket https://bitbucket.org/genikineg/smartcryptopassword.git
+git push -u bitbucket master
+
+почистить кэш
+git rm --cached .idea
+
