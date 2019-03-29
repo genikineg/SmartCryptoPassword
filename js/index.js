@@ -127,47 +127,35 @@ getPassword = appOrSite => {
             .toString()
         ).toString(CryptoJS.enc.Utf8)
       );
-
       var $temp = $("<input style='display:block;width: 50px;height: 1px;'>");
       $("body").append($temp);
-
       let passwordapp = CryptoJS.SHA3(data.password + appOrSite).toString();
-
       for (let key in mapPasswordSha) {
         passwordapp = passwordapp.replace(
           mapPasswordSha[key].key,
           mapPasswordSha[key].value
         );
       }
-
+      passwordapp = passwordapp.substr(0, 56);
       $temp.val(passwordapp).select();
-
       document.execCommand("copy");
       $temp.remove();
-
       data = null;
-
       let audio = new Audio("/sound/Notify.ogg");
       audio.play();
-
       $(".successfullyGetPassword").fadeIn("slow", function() {
         setTimeout(() => {
           $(".successfullyGetPassword").fadeOut("slow", function() {
             setTimeout(() => {
-              win.hide();
-            }, 1000 * 1.5);
-
-            setTimeout(() => {
+              $(".pincode").val("");
               clipboard.set("SmartCryptoPassword");
-            }, 1000 * 10);
+            }, 1000 * 15);
           });
         }, 1000);
       });
-
       clipboard.set(passwordapp);
+      passwordapp = null;
     } catch (err) {
-      alert(err);
-
       $(".failGetPassword").fadeIn("slow", function() {
         setTimeout(() => {
           $(".failGetPassword").fadeOut("slow", function() {});
@@ -175,7 +163,15 @@ getPassword = appOrSite => {
       });
     }
   } else {
-    alert("Settings!");
+    $(".getPasswordButton").fadeOut("slow", function() {});
+    $(".modal-content-apps").fadeOut("slow", function() {});
+    $(".settingsButton").fadeOut("slow", function() {});
+    $(".modal-icons").fadeOut("slow", function() {});
+    $(".modal-donations").fadeOut("slow", function() {});
+    $(".modal-content-segetPasswordttings").fadeOut("slow", function() {});
+    $(".modal-content-description").fadeOut("slow", function() {
+      $(".modal-content-settings").fadeIn("slow", function() {});
+    });
   }
 };
 

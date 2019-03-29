@@ -1,61 +1,61 @@
 {
-    "nodejs": true,
-    "webexe_settings": {
-        "linux-x32": false,
-        "windows-x64": true,
-        "custom_script": "",
-        "nw_version": "0.37.1",
-        "nw_compression_level": 0,
-        "mac-x64": true,
-        "sdk_build": false,
-        "download_dir": "/home/pc/.local/share/Web2Executable/files/downloads",
-        "windows-x32": false,
-        "uncompressed_folder": false,
-        "export_dir": "output",
-        "linux-x64": true,
-        "force_download": false,
-        "mac-x32": false
-    },
-    "name": "SmartCryptoPassword",
-    "single-instance": true,
     "app_name": "SmartCryptoPassword",
-    "additional_trust_anchors": [
-        ""
-    ],
-    "webkit": {
-        "plugin": true,
-        "page-cache": false,
-        "java": false
-    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "main": "index.html",
-    "license": "ISC",
+    "author": "",
     "window": {
         "title": "SmartCryptoPassword",
+        "focus": false,
         "fullscreen": false,
-        "show": true,
-        "visible": true,
-        "mac_icon": "lock.png",
         "toolbar": true,
-        "icon": "lock.png",
+        "as_desktop": false,
+        "height": 520,
+        "kiosk": false,
+        "visible": true,
         "transparent": true,
         "kiosk_emulation": false,
-        "width": 380,
+        "always_on_top": false,
         "resizable": false,
+        "icon": "lock.png",
+        "show": true,
+        "mac_icon": "lock.png",
         "exe_icon": "lock.png",
-        "frame": false,
         "show_in_taskbar": true,
-        "as_desktop": false,
-        "focus": false,
-        "kiosk": false,
-        "height": 520,
-        "always_on_top": false
+        "frame": false,
+        "width": 380
     },
     "version": "1.0.0",
+    "name": "SmartCryptoPassword",
+    "license": "ISC",
+    "nodejs": true,
     "dependencies": {
         "pretty-bytes": "^1.0.2"
     },
-    "author": ""
+    "additional_trust_anchors": [
+        ""
+    ],
+    "main": "index.html",
+    "single-instance": true,
+    "webexe_settings": {
+        "mac-x64": false,
+        "sdk_build": false,
+        "windows-x64": true,
+        "windows-x32": false,
+        "mac-x32": false,
+        "uncompressed_folder": false,
+        "linux-x64": true,
+        "force_download": false,
+        "custom_script": "",
+        "linux-x32": false,
+        "download_dir": "/home/pc/.local/share/Web2Executable/files/downloads",
+        "nw_version": "0.37.1",
+        "nw_compression_level": 0,
+        "export_dir": "output"
+    },
+    "webkit": {
+        "page-cache": true,
+        "java": false,
+        "plugin": true
+    }
 }
