@@ -2,7 +2,12 @@ git init
 
 git add -A
 
+git status
+
 git commit -m "first commit"
+
+git commit -m "new password map generator (the ability to create a personalized card for password generation)"
+
 
 git remote add github https://github.com/genikineg/SmartCryptoPassword.git
 git push github master

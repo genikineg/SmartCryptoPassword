@@ -1,14 +1,14 @@
 $(document).ready(function() {
-  mapPasswordSha = [];
+  passwordMap = [];
 
   $.ajax({
     dataType: "json",
-    url: "/js/mapPasswordSha.json",
+    url: "/js/passwordMap.json",
     success: data => {
-      mapPasswordSha = data;
+      passwordMap = data;
     },
     error: data => {
-      alert("error mapPasswordSha.json");
+      alert("error passwordMap.json");
     }
   });
 
@@ -130,10 +130,10 @@ getPassword = appOrSite => {
       var $temp = $("<input style='display:block;width: 50px;height: 1px;'>");
       $("body").append($temp);
       let passwordapp = CryptoJS.SHA3(data.password + appOrSite).toString();
-      for (let key in mapPasswordSha) {
+      for (let key in passwordMap) {
         passwordapp = passwordapp.replace(
-          mapPasswordSha[key].key,
-          mapPasswordSha[key].value
+          passwordMap[key].key,
+          passwordMap[key].value
         );
       }
       passwordapp = passwordapp.substr(0, 56);
